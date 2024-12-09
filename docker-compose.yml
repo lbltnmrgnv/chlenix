@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  telegram-allure-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/chlenix
+    container_name: chlenix-bot
+    expose:
+      - '8080'
+    ports:
+      - '8080:8080'
